@@ -22,10 +22,10 @@ Entry.prototype.numberOfVowels = function(sentence) {
 
 Entry.prototype.numberOfConsonants = function(sentence) {
   var charSplit = sentence.split("");
-  var numberOfConsonants = 0
-  var regex = /^[a-zA-Z]+$/g;
+  var numberOfConsonants = 0;
+  var regex = /^[A-Za-z]+$/;
   for (var i = 0; i < charSplit.length; i++) {
-    if (charSplit[i] !== "a" && charSplit[i] !== "e" && charSplit[i] !== "i" && charSplit[i] !== "o" && charSplit[i] !== "u" && charSplit[i] == regex) {
+    if (charSplit[i] !== "a" && charSplit[i] !== "e" && charSplit[i] !== "i" && charSplit[i] !== "o" && charSplit[i] !== "u" && charSplit[i] !== " " && charSplit[i].match(regex)) {
       numberOfConsonants++;
     }
   }
@@ -34,9 +34,13 @@ Entry.prototype.numberOfConsonants = function(sentence) {
 
 Entry.prototype.getTeaser = function(sentence) {
   var splitString = sentence.split(" ");
-  var teaserArray;
+  var teaserArray = new Array;
+  console.log(teaserArray);
   for (var i = 0; i<9; i++) {
     teaserArray.push(splitString[i]);
+
   }
+  teaserArray = teaserArray.join(" ");
+  console.log(teaserArray);
   return teaserArray;
 };
