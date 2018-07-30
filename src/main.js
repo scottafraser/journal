@@ -1,4 +1,4 @@
-// import { Entry } from './entry';
+import { Entry } from './entry';
 import './styles.css';
 
 $(document).ready(function() {
@@ -6,13 +6,16 @@ $(document).ready(function() {
     event.preventDefault();
     var title = $('#title').val();
     var body = $('#body').val();
-    // var newEntry = new Entry(body, title);
+    var newEntry = new Entry(body, title);
+    var numberOfWords = newEntry.numberOfWords(body);
+    var numberOfVowels = newEntry.numberOfVowels(body);
+    var numberOfConsonants = newEntry.numberOfConsonants(body);
     $('#entry-area').append(
-        "<div>"
-          + title +
-        "</div> <div>"
-          + body +
-        "</div>"
+        "<div><p>Word Count: "
+        + numberOfWords + ", Vowel Count: " + numberOfVowels + ", Consonant Count: " + numberOfConsonants + "</p>" +
+        "<h1>Title</h1><p>"  + title + "</p>" +
+        "</div> <div>" +
+        "<h1>Body</h1><p>"  + body + "</p></div>"
       );
     });
   });
