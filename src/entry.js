@@ -3,8 +3,9 @@ export function Entry(title, body) {
   this.body = body;
 }
 
-Entry.prototype.numberOfWords = function(sentence) {
-  var splitString = sentence.split(" ");
+Entry.prototype.numberOfWords = function() {
+  debugger;
+  var splitString = this.body.split(" ");
   var numberOfWords = splitString.length;
   return numberOfWords;
 };

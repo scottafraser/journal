@@ -1,10 +1,13 @@
 import { Entry } from './entry';
 import './styles.css';
+import $ from 'jquery';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 $(document).ready(function() {
   $('#new-entry').submit(function(event) {
     event.preventDefault();
-    
+
     var title = $('#title').val();
     var body = $('#body').val();
     var newEntry = new Entry(body, title);
