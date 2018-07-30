@@ -4,12 +4,25 @@ body {
 
 #body { width: 390px; height: 90px; border: 1px solid #999999; padding: 5px; }
 
-
-.new-entry {
+#header{
   display: flex;
-
+  justify-content: center;
+  height: 150px;
+  padding: 20px;
 }
 
-.entry-area {
+#side-bar{
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 20%;
+  float: left;
+}
+
+.main{
   display: flex;
+  align-items: column;
+  justify-content: center;
+
+
+
 }

@@ -4,7 +4,6 @@ export function Entry(title, body) {
 }
 
 Entry.prototype.numberOfWords = function() {
-  debugger;
   var splitString = this.body.split(" ");
   var numberOfWords = splitString.length;
   return numberOfWords;
